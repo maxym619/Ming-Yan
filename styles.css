@@ -55,8 +55,16 @@ section h2{margin:0 0 0.5rem;color:#fff}
 
 footer{padding:2rem 0;text-align:center;color:var(--muted)}
 
+/* Make Experience area more prominent */
+.job{font-size:1rem;line-height:1.7}
+.job h3{font-size:1.05rem;margin-bottom:0.35rem}
 @media(min-width:900px){
-	.main-grid{grid-template-columns:2fr 1fr}
+	#experience{padding:1.5rem}
+	.main-grid{gap:1.5rem}
+}
+
+@media(min-width:900px){
+	.main-grid{grid-template-columns:3fr 1fr}
 	.projects-grid{grid-template-columns:1fr 1fr}
 }
 

@@ -1,10 +1,57 @@
-:root{--bg:#f7f7fb;--card:#ffffff;--accent:#2563eb;--muted:#6b7280}
-*{box-sizing:border-box}body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;smooth-font-smoothing:antialiased;margin:0;background:var(--bg);color:#111}
-header{background:linear-gradient(90deg,rgba(37,99,235,0.12),transparent);padding:3rem 1rem;text-align:center}
-header h1{margin:0;font-size:2rem}
-nav{display:flex;gap:1rem;justify-content:center;padding:0.75rem}
-main{max-width:880px;margin:2rem auto;padding:0 1rem}
-section{background:var(--card);border-radius:8px;padding:1rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(16,24,40,0.04)}
-a{color:var(--accent);text-decoration:none}
-footer{text-align:center;padding:1rem;color:var(--muted)}
-@media(min-width:700px){header h1{font-size:2.5rem}}
+:root{
+	--bg: #0f172a; /* deep midnight */
+	--card: #0b1220;
+	--accent-1: #7c3aed; /* purple */
+	--accent-2: #06b6d4; /* cyan */
+	--muted: #94a3b8;
+	--glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{
+	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	margin:0;
+	background: linear-gradient(180deg, #071029 0%, #081226 100%);
+	color: #e6eef8;
+}
+
+.container{max-width:1000px;margin:0 auto;padding:1rem}
+
+.site-header{padding:3rem 0;background:linear-gradient(90deg, rgba(124,58,237,0.12), rgba(6,182,212,0.06));border-bottom:1px solid rgba(255,255,255,0.02)}
+.header-grid{display:grid;grid-template-columns:1fr 280px;gap:1.25rem;align-items:center}
+.hero h1{margin:0;font-size:2rem}
+.role{color:var(--muted);margin:0.25rem 0}
+.tagline{color:var(--muted);max-width:40ch}
+.links{margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap}
+.links a{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));padding:0.5rem 0.75rem;color:#fff;border-radius:8px;text-decoration:none}
+
+.profile-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6);align-self:start}
+.avatar{width:100%;height:180px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;position:relative;overflow:hidden}
+.avatar-img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+.meta{list-style:none;padding:0;margin:0;margin-top:0.75rem;color:var(--muted)}
+.meta li{padding:0.25rem 0}
+
+.main-grid{display:grid;grid-template-columns:1fr;gap:1rem;padding:2rem 0}
+section{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+section h2{margin:0 0 0.5rem;color:#fff}
+
+.job-meta{color:var(--muted);font-size:0.95rem;margin-bottom:0.5rem}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:0.75rem}
+.project{padding:0.75rem;border-radius:8px;background:var(--glass)}
+.skill-list{display:flex;flex-wrap:wrap;gap:0.5rem}
+.skill{background:linear-gradient(90deg,var(--accent-2),var(--accent-1));color:#fff;padding:0.35rem 0.6rem;border-radius:999px;font-size:0.9rem}
+
+footer{padding:2rem 0;text-align:center;color:var(--muted)}
+
+@media(min-width:900px){
+	.main-grid{grid-template-columns:2fr 1fr}
+	.projects-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:899px){
+	.header-grid{grid-template-columns:1fr;}
+	.profile-card{order:3}
+}

@@ -59,12 +59,17 @@ footer{padding:2rem 0;text-align:center;color:var(--muted)}
 .job{font-size:1rem;line-height:1.7}
 .job h3{font-size:1.05rem;margin-bottom:0.35rem}
 @media(min-width:900px){
-	#experience{padding:1.5rem}
-	.main-grid{gap:1.5rem}
+	/* Emphasize the experience section visually */
+	#experience{padding:2rem;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border:1px solid rgba(0,212,255,0.06);box-shadow:0 30px 70px rgba(0,212,255,0.06);border-radius:14px}
+	.main-grid{gap:2rem}
+	.job{font-size:1.02rem;line-height:1.85}
+	.job h3{font-size:1.12rem}
+	section:not(#experience){opacity:0.92}
 }
 
 @media(min-width:900px){
-	.main-grid{grid-template-columns:3fr 1fr}
+	/* Make Experience the dominant column */
+	.main-grid{grid-template-columns:4fr 1fr}
 	.projects-grid{grid-template-columns:1fr 1fr}
 }
 

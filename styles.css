@@ -70,6 +70,9 @@ footer{padding:2rem 0;text-align:center;color:var(--muted)}
 /* Make About short and stack Education under it on wide screens */
 #about{max-height:240px;overflow:hidden;padding:0.9rem}
 #education{margin-top:0.5rem}
+/* Make About show fully and stack Education under it on wide screens */
+#about{max-height:none;overflow:visible;padding:1rem}
+#education{margin-top:0.5rem}
 
 @media(max-width:899px){
 	/* On small screens keep natural document order and stacking */
@@ -80,6 +83,7 @@ footer{padding:2rem 0;text-align:center;color:var(--muted)}
 	/* Left = main content (Experience), Right = sidebar (About + Education)
 		 Make the right column wider so About appears more prominent but short. */
 	.main-grid{grid-template-columns:3fr 1.6fr}
+	.main-grid{grid-template-columns:3fr 2fr}
 	.projects-grid{grid-template-columns:1fr 1fr}
 
 	/* Place sections explicitly to ensure About and Education stack in the right column */
